@@ -1,0 +1,255 @@
+{
+  "packages": [
+    {
+      "name": "rfthings-stm32l4",
+      "maintainer": "RFThings Vietnam",
+      "websiteURL": "rfthings.com.vn",
+      "email": "support@rfthings.com.vn",
+      "help": {
+        "online": "rfthings.com.vn"
+      },
+      "platforms": [
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.61",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/RFThings/rfthings-stm32l4"
+          },
+          "url": "https://github.com/RFThings/rfthings-stm32l4/archive/refs/tags/v0.0.61.tar.gz",
+          "archiveFileName": "rfthings-stm32l4-0.0.61.tar.gz",
+          "checksum": "MD5:4DD8472ECF0FAE119B3D3185638987EC",
+          "size": "17259892",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"},
+            {"name": "RFThings-DKAIoT"},
+            {"name": "RFThings-Generic"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.60",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/RFThings/rfthings-stm32l4"
+          },
+          "url": "https://github.com/RFThings/rfthings-stm32l4/archive/refs/tags/v0.0.6.tar.gz",
+          "archiveFileName": "rfthings-stm32l4-0.0.6.tar.gz",
+          "checksum": "MD5:CC15E61E0FDF2D1794BA2F77F29B9057",
+          "size": "16585405",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"},
+            {"name": "RFThings-DKAIoT"},
+            {"name": "RFThings-Generic"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.50-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/RFThings/rfthings-stm32l4"
+          },
+          "url": "https://github.com/RFThings/rfthings-stm32l4/archive/refs/tags/v0.0.5-test.tar.gz",
+          "archiveFileName": "rfthings-stm32l4-0.0.5-test.tar.gz",
+          "checksum": "MD5:BD9EF342CF745767C371EF4F4CE8BACF",
+          "size": "16579578",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"},
+            {"name": "RFThings-DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.43-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/RFThings/rfthings-stm32l4"
+          },
+          "url": "https://github.com/RFThings/rfthings-stm32l4/archive/refs/tags/v0.0.4RC3-test.tar.gz",
+          "archiveFileName": "rfthings-stm32l4-0.0.4RC3-test.tar.gz",
+          "checksum": "MD5:73036D18E44DBCF707DEB14FCFDAE95C",
+          "size": "16571953",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.41-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/tree/rfthings"
+          },
+          "url": "https://github.com/RFThings/arduino-STM32L4/archive/refs/tags/v0.0.4RC2-test.tar.gz",
+          "archiveFileName": "arduino-STM32L4-0.0.4RC2-test.tar.gz",
+          "checksum": "MD5:3104e178b0a15ebb917e2eb7be0416a5",
+          "size": "16571913",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "RFThings STM32L4 Boards",
+          "architecture": "stm32l4",
+          "version": "0.0.4-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/tree/rfthings"
+          },
+          "url": "https://github.com/RFThings/arduino-STM32L4/archive/refs/tags/v0.0.4-test.tar.gz",
+          "archiveFileName": "arduino-STM32L4-0.0.4-test.tar.gz",
+          "checksum": "MD5:d80dd4431a36a803df2a6f998a6afdcf",
+          "size": "16571702",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "STM32L4 Boards (RFThings)",
+          "architecture": "stm32l4",
+          "version": "0.0.3-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/tree/rfthings"
+          },
+          "url": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/releases/download/v0.0.3-test/arduino-STM32L4-0.0.3-test.tar.gz",
+          "archiveFileName": "arduino-STM32L4-0.0.3-test.tar.gz",
+          "checksum": "MD5:85b9d559cdd686ae6eeffdf2a3f8898b",
+          "size": "16574773",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"},
+            {"name": "Dragonfly-L476RE"},
+            {"name": "Dragonfly-L496RG"},
+            {"name": "Butterfly-L433CC"},
+            {"name": "Ladybug-L432KC"},
+            {"name": "NUCLEO-L432KC"},
+            {"name": "NUCLEO-L476RG"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "STM32L4 Boards (RFThings)",
+          "architecture": "stm32l4",
+          "version": "0.0.2-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/tree/rfthings"
+          },
+          "url": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/releases/download/v0.0.2-test/arduino-STM32L4-0.0.2-test.tar.gz",
+          "archiveFileName": "arduino-STM32L4-0.0.2-test.tar.gz",
+          "checksum": "MD5:dd465e09a8d93a86c211b8e33149c261",
+          "size": "16573489",
+          "boards": [
+            {"name": "RFThings-DKPlatinum"},
+            {"name": "RFThings-DKBlue"},
+            {"name": "Dragonfly-L476RE"},
+            {"name": "Dragonfly-L496RG"},
+            {"name": "Butterfly-L433CC"},
+            {"name": "Ladybug-L432KC"},
+            {"name": "NUCLEO-L432KC"},
+            {"name": "NUCLEO-L476RG"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "STM32L4 Boards (RFThings)",
+          "architecture": "stm32l4",
+          "version": "0.0.1-test",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/tree/rfthings"
+          },
+          "url": "https://github.com/nguyenmanhthao996tn/arduino-STM32L4/releases/download/v0.0.1-test/arduino-STM32L4-0.0.1-test.tar.gz",
+          "archiveFileName": "arduino-STM32L4-0.0.1-test.tar.gz",
+          "checksum": "MD5:4fb854f25e999b0ee40ca6bbd9b086f5",
+          "size": "16566960",
+          "boards": [
+            {"name": "RFThings-DK"},
+            {"name": "Dragonfly-L476RE"},
+            {"name": "Dragonfly-L496RG"},
+            {"name": "Butterfly-L433CC"},
+            {"name": "Ladybug-L432KC"},
+            {"name": "NUCLEO-L432KC"},
+            {"name": "NUCLEO-L476RG"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        }
+      ],
+      "tools":[
+      ]
+    }
+  ]
+}
