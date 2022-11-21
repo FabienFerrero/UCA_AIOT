@@ -18,6 +18,8 @@ sx126x.set_coding_rate(RFT_LORA_CODING_RATE_4_5);
 sx126x.set_syncword(RFT_LORA_SYNCWORD_PUBLIC);
 ```
 
+# Function Description
+
 ### Set LoRa Transmit Power
 ```
 void set_tx_power(int8_t tx_power);
