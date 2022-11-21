@@ -12,7 +12,7 @@ All of examples in this reposistory are integrated into the Arduino Core. Make s
 
 ## Schematic
 
-The schematic of the board is available in [doc/LS200-007_SCHEMATIC.pdf](https://github.com/FabienFerrero/DKIOT/blob/main/doc/LS200-007_SCHEMATIC.pdf)
+The schematic of the board is available in [<b>doc/LS200-007_SCHEMATIC.pdf</b>](https://github.com/FabienFerrero/DKIOT/blob/main/doc/LS200-007_SCHEMATIC.pdf)
 
 ## Getting Started with Examples
 
@@ -44,7 +44,7 @@ For more information on the examples:
 
 The board has been successfully tested with several SX1262 library :
 
-* LoRaWAN Mac protocol: [FabienFerrero/basicmac](https://github.com/FabienFerrero/basicmac) forked from: [LacunaSpace/basicmac](https://github.com/LacunaSpace/basicmac)
+* LoRaWAN Mac protocol: [<b>FabienFerrero/basicmac</b>](https://github.com/FabienFerrero/basicmac) forked from: [<b>LacunaSpace/basicmac</b>](https://github.com/LacunaSpace/basicmac)
 
 **Warning**: Add the following line in the code to make it work.
 
@@ -52,7 +52,7 @@ The board has been successfully tested with several SX1262 library :
 #define ARDUINO_STM32L4_LS200
 ```
 
-* LoRa Physical layer: [StuartsProjects/SX12XX-LoRa](https://github.com/StuartsProjects/SX12XX-LoRa)
+* LoRa Physical layer: [<b>StuartsProjects/SX12XX-LoRa</b>](https://github.com/StuartsProjects/SX12XX-LoRa)
 
 **Warning**: SPI PINS for SX1262 must be defined
 ```
