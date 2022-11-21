@@ -34,7 +34,7 @@ sx126x.set_coding_rate(RFT_LORA_CODING_RATE_4_5);
 sx126x.set_syncword(RFT_LORA_SYNCWORD_PUBLIC);
 ```
 
-## Function Description
+# Function Description
 
 ### Set LoRaWAN Transmit fPort
 
