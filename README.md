@@ -8,7 +8,7 @@
 
 Please install & use the official Arduino Core from **RFThings**: [<b>RFThings/arduino-STM32L4</b>](https://github.com/RFThings/arduino-STM32L4)
 
-*All of examples in this reposistory are integrated into the Arduino Core. Make sure that the installed core version is **0.0.61 (or above)** to be compatible with all examples in this repository!*
+*All examples & libraries used in this reposistory are integrated into the Arduino Core. Make sure that the installed core version is **0.0.61 (or above)** to be compatible with all examples in this repository!*
 
 ## Schematic
 
