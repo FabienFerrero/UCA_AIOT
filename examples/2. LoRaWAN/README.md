@@ -1,4 +1,4 @@
-# 1. LoRaWAN
+# 2. LoRaWAN
 
 ## Description
 
