@@ -9,11 +9,9 @@
  * Lib jointy developed by UCA & RFThings
  */
 
-#include "../rfthings_radio.h"
-#include "sx126x_driver/sx126x.h"
-#include "sx126x_driver/sx126x_hal.h"
-#include "sx126x_driver/sx126x_regs.h"
-
+#include "rfthings_radio.h"
+#include "sx126x.h"
+#include "sx126x_hal.h"
 #include <RTC.h>
 
 extern volatile bool detect_preamble;

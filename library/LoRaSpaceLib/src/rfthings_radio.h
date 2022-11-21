@@ -11,9 +11,7 @@
 
 #include "Arduino.h"
 #include "SPI.h"
-#include "../RFThings.h"
-#include "../aes/Encrypt.h"
-#include "../aes/AES-128.h"
+#include "RFThings.h"
 
 class rfthings_radio {
     public:

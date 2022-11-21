@@ -21,7 +21,7 @@
 */
 
 #include <RFThings.h>
-#include <radio/sx126x/rfthings_sx126x.h>
+#include <rfthings_sx126x.h>
 
 rfthings_sx126x sx126x(E22_NSS, E22_NRST, E22_BUSY, E22_DIO1, E22_RXEN);
 rft_status_t status;

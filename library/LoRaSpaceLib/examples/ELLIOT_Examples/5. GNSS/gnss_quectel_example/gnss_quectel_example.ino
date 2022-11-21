@@ -21,7 +21,7 @@
 */
 
 #include <RFThings.h>
-#include <radio/sx126x/rfthings_sx126x.h>
+#include <rfthings_sx126x.h>
 #include <RTC.h>
 #include <Wire.h>
 #include <MicroNMEA.h> // http://librarymanager/All#MicroNMEA

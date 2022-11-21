@@ -10,7 +10,7 @@
  */
 
 #include <RFThings.h>
-#include <radio/sx126x/rfthings_sx126x.h>
+#include <rfthings_sx126x.h>
 
 // Device information (For uploading relay status)
 static uint8_t nwkS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}; // <-- MODIFY THIS INFORMATION ACCORDING TO YOUR USECASE

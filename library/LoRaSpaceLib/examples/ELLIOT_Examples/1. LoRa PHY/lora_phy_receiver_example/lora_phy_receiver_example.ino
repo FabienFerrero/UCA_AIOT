@@ -21,7 +21,7 @@
 */
 
 #include <RFThings.h>
-#include <radio/sx126x/rfthings_sx126x.h>
+#include <rfthings_sx126x.h>
 
 #define TX_INTERVAL 10
 
