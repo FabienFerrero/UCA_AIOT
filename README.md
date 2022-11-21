@@ -9,7 +9,7 @@
 
 Please use the official Arduino Core from RFThings repository to configure your Arduino IDE with RFThings AIoT Board: [RFThings/arduino-STM32L4](https://github.com/RFThings/arduino-STM32L4)
 
-`Ensure that the installed core version is 0.0.61 (or above) to be compatible with all example in this repo`
+**Ensure that the installed core version is 0.0.61 (or above) to be compatible with all examples in this repository.**
 
 ## Schematic
 
@@ -21,7 +21,7 @@ The board has been successfully tested with several SX1262 library :
 
 * LoRaWAN Mac protocol: [FabienFerrero/basicmac](https://github.com/FabienFerrero/basicmac) forked from: [LacunaSpace/basicmac](https://github.com/LacunaSpace/basicmac)
 
-`Warning`: Add the following line in the code to make it work.
+**Warning**: Add the following line in the code to make it work.
 
 ```
 #define ARDUINO_STM32L4_LS200
@@ -29,7 +29,7 @@ The board has been successfully tested with several SX1262 library :
 
 * LoRa Physical layer: [StuartsProjects/SX12XX-LoRa](https://github.com/StuartsProjects/SX12XX-LoRa)
 
-`Warning`: SPI PINS for SX1262 must be defined
+**Warning**: SPI PINS for SX1262 must be defined
 ```
 cfg.nssPin = E22_NSS;
 cfg.resetPin = E22_NRST;
