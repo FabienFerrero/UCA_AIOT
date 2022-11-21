@@ -1,4 +1,4 @@
-# UCA_AIOT
+# UCA_AIoT Board (LoRa :green_heart: Space)
 
 
 ![alt text](doc/Untitled.png)
@@ -7,9 +7,9 @@
 ## Installing Board Manager
 
 
-Please use the official Arduino Core from RFThings repository to configure your Arduino IDE with RFThings AIoT Board: [RFThings/arduino-STM32L4](https://github.com/RFThings/arduino-STM32L4)
+Please use the official Arduino Core from **RFThings repository** to configure your Arduino IDE with **RFThings AIoT Board**: [RFThings/arduino-STM32L4](https://github.com/RFThings/arduino-STM32L4)
 
-**Ensure that the installed core version is 0.0.61 (or above) to be compatible with all examples in this repository.**
+**Make sure that the installed core version is 0.0.61 (or above) to be compatible with all examples in this repository.**
 
 ## Schematic
 
@@ -37,3 +37,5 @@ cfg.antennaSwitchPin = E22_RXEN;
 cfg.busyPin = E22_BUSY;
 cfg.dio1Pin = E22_DIO1;
 ```
+
+##### Maintained by Prof. F. Fererro & mtnguyen
