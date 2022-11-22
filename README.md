@@ -1,7 +1,7 @@
 # UCA_AIoT Board (LoRa :green_heart: Space)
 
 
-![UCA_AIoT Board](doc/Untitled.png)
+![UCA_AIoT Board](doc/board.jpg)
 
 
 ## Installing Board Manager
