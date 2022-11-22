@@ -17,6 +17,8 @@ Default configuration is given below.
 This code is continuously sending LoRa PHY packets with a sequential shift on the center frequency.
 Default configuration is given below.
 
+# LoRa PHY parameters
+
 The parameters of LoRa PHY can be modify via following functions:
 
 ```
