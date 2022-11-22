@@ -134,4 +134,4 @@ void set_syncword(rft_lora_syncword_t syncword);
 | syncword  | **RFT_LORA_SYNCWORD_PRIVATE** | Private Network Syncword (0x1424) |
 | syncword  | **RFT_LORA_SYNCWORD_PUBLIC**  | Public Network Syncword (0x3444)  |
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen

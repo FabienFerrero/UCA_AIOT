@@ -46,4 +46,4 @@ To enable this feature, copy the `packet_formatter.js`'s content to application 
 - Library for Ublox CAM-M8Q: [sparkfun/SparkFun_Ublox_Arduino_Library](https://github.com/sparkfun/SparkFun_Ublox_Arduino_Library)
 - Library for Quectel L96: [stevemarple/MicroNMEA](https://github.com/stevemarple/MicroNMEA)
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen

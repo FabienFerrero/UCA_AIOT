@@ -60,4 +60,4 @@ This is a non-blocking function to command the LoRa Module to stop the continuou
 rft_status_t stop_continuous_wave(void)
 ```
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen

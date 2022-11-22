@@ -127,4 +127,4 @@ rft_status_t relay(rft_lora_params_t *relay_lora_params, byte *payload, uint32_t
 | RFT_STATUS_PREAMBLE_DETECT_FAIL | Preamble detected but not detect Syncword |
 | RFT_STATUS_RX_TIMEOUT           | Preamble & Syncword detected but Receiving takes too long |
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen

@@ -131,4 +131,4 @@ void set_lrfhss_grid(rft_lrfhss_grid_t grid);
 | grid      | **RFT_LRFHSS_GRID_25_KHZ**    | Grid 25 kHz   |
 | grid      | **RFT_LRFHSS_GRID_3_9_KHZ**   | Grid 3.9 kHz  |
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen

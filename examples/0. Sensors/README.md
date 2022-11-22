@@ -22,4 +22,4 @@ All components are checked in term of I2C connectivity, controlling library init
 This sketch is also support Firmware Uploading for GNSS Module Quectel L96. If you need to modify the firmware, hold **USR_BTN** at board reset. Firmware Uploading mode running is indicated by the **LED_BUILTIN** (LED Blue) is always ON. For further information on this mode, please contacts RFThings Support Team at [support@rfthings.com.vn](mailto:support@rfthings.com.vn).
 
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen
