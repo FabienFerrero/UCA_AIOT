@@ -36,7 +36,7 @@ For more information on the examples:
 
 [5. GNSS](examples/5.%20GNSS/)
 
-[6. CW](examples/6.%20CW/)
+[6. CW (Continuous wave)](examples/6.%20CW/)
 
 [7. Others](examples/7.%20Others/)
 
