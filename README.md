@@ -63,4 +63,4 @@ cfg.busyPin = E22_BUSY;
 cfg.dio1Pin = E22_DIO1;
 ```
 
-##### Maintained by Prof. F. Fererro & mtnguyen
+##### Maintained by Prof. F. Ferrero & mtnguyen
