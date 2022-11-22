@@ -21,5 +21,11 @@ All components are checked in term of I2C connectivity, controlling library init
 
 This sketch is also support Firmware Uploading for GNSS Module Quectel L96. If you need to modify the firmware, hold **USR_BTN** at board reset. Firmware Uploading mode running is indicated by the **LED_BUILTIN** (LED Blue) is always ON. For further information on this mode, please contacts RFThings Support Team at [support@rfthings.com.vn](mailto:support@rfthings.com.vn).
 
-
+# Credits
+- [sparkfun/SparkFun_Ublox_Arduino_Library](https://github.com/sparkfun/SparkFun_Ublox_Arduino_Library)
+- [stevemarple/MicroNMEA](https://github.com/stevemarple/MicroNMEA)
+- [ncdcommunity/Arduino_Library_HP203B_Barometer_Altimeter_Sensor](https://github.com/ncdcommunity/Arduino_Library_HP203B_Barometer_Altimeter_Sensor)
+- [automote/LTR303](https://github.com/automote/LTR303)
+- [adafruit/Adafruit_SGP30](https://github.com/adafruit/Adafruit_SGP30)
+- [sparkfun/SparkFun_ICM-20948_ArduinoLibrary](https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary)
 ##### Maintained by Prof. F. Ferrero & mtnguyen
