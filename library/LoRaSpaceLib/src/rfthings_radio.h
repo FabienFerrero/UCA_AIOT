@@ -114,6 +114,10 @@ class rfthings_radio {
         uint8_t get_lrfhss_nbSync(void);
         uint32_t get_lrfhss_frequency(void);
         int8_t get_lrfhss_power(void);
+
+        // For doppler test
+        bool get_force_ldro(void);
+        void set_force_ldro(bool force_ldro);
         
     protected:
         rft_lora_params_t lora_params;

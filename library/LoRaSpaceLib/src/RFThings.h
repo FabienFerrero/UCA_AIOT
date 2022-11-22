@@ -96,6 +96,9 @@ typedef struct
 	uint8_t relay_rx_symbol;						// Default value is 5 symbols
 	uint8_t relay_max_rx_packet_length; // Default value is 120 bytes
 
+	// For Doppler test
+	bool force_ldro;
+
 } rft_lora_params_t;
 
 // LR-FHSS parameters
