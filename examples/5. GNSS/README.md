@@ -36,6 +36,12 @@ The LoRaWAN packet is 17-bytes long and formatted as following:
 |------------|----------|------------|----------|------------------------------------|
 | EPOCH Time | Latitude | Longtitude | Altitude | Num. of Current fixed satellite(s) |
 
+## The Things Network Packet Formatter
+
+If you are using The Things Network, The Things Stack or The Things Industried, the uplink message can be formated to seperately retrieve **EPOCH Time**, **Latitude**, **Longtitude**, **Altitude**, **Num. of Current fixed satellite(s)**. Otherwise, it only shows the uplink messages in BASE64 format.
+
+To enable this feature, copy the `packet_formatter.js`'s content to application or end-device formatter. Refer to this [Payload Formatters](https://www.thethingsindustries.com/docs/integrations/payload-formatters/) instruction from The Things Industried for further information.
+
 ## Credits
 - Library for Ublox CAM-M8Q: [sparkfun/SparkFun_Ublox_Arduino_Library](https://github.com/sparkfun/SparkFun_Ublox_Arduino_Library)
 - Library for Quectel L96: [stevemarple/MicroNMEA](https://github.com/stevemarple/MicroNMEA)
