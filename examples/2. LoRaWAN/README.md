@@ -47,7 +47,7 @@ void set_tx_port(uint8_t tx_port);
 | tx_port   | 1..223 (0x01..0xDF) | Application-specific port (Recommended) |
 | tx_port   | 224                 | LoRaWAN Mac layer test protocol         |
 
-(*LoRaWAN 1.0.3 Specification*)
+([*LoRaWAN 1.0.3 Specification*](https://lora-alliance.org/resource_hub/lorawan-specification-v1-0-3/))
 
 ### Set LoRaWAN Downlink Windows 1 Delay
 
@@ -59,7 +59,7 @@ void set_rx1_delay(uint32_t rx1_delay);
 |:---------:|:--------------------------------------------------:|
 | rx1_delay | Delay time for first downlink windows in second(s) |
 
-(*RP2-1.0.3 LoRaWAN Regional Parameters*)
+([*RP2-1.0.3 LoRaWAN Regional Parameters*](https://lora-alliance.org/resource_hub/rp2-1-0-3-lorawan-regional-parameters/))
 
 ### Set LoRa Transmit Power
 ```
