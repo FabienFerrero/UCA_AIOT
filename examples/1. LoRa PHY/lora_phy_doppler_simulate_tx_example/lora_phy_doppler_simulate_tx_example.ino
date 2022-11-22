@@ -54,9 +54,10 @@ void setup()
 
     // LoRa parameters
     sx126x.set_tx_power(22);
+    sx126x.set_force_ldro(true);
     sx126x.set_frequency(CENTER_FREQUENCY_IN_HZ);
-    sx126x.set_spreading_factor(RFT_LORA_SPREADING_FACTOR_7);
-    sx126x.set_bandwidth(RFT_LORA_BANDWIDTH_125KHZ);
+    sx126x.set_spreading_factor(RFT_LORA_SPREADING_FACTOR_9);
+    sx126x.set_bandwidth(RFT_LORA_BANDWIDTH_250KHZ);
     sx126x.set_coding_rate(RFT_LORA_CODING_RATE_4_5);
     sx126x.set_syncword(RFT_LORA_SYNCWORD_PUBLIC);
 
