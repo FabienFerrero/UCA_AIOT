@@ -2,10 +2,20 @@
 
 ## Description
 
-Examples in this section demonstrate a simple device-to-device communication over LoRa PHY. The **lora_phy_sender_example** send a LoRa PHY packet every `TX_INTERVAL` seconds. The **lora_phy_receiver_example** listen continuously for LoRa PHY packets and print packet's information to serial monitor.
+Examples in this section demonstrate a simple device-to-device communication over LoRa PHY. 
 
 ## lora_phy_sender_example
+The **lora_phy_sender_example** send a LoRa PHY packet every `TX_INTERVAL` seconds.
+Default configuration is given below.
+
+
 ## lora_phy_receiver_example
+The **lora_phy_receiver_example** listen continuously for LoRa PHY packets and print packet's information to serial monitor.
+Default configuration is given below.
+
+## lora_phy_send_doppler_example
+This code is continuously sending LoRa PHY packets with a sequential shift on the center frequency.
+Default configuration is given below.
 
 The parameters of LoRa PHY can be modify via following functions:
 
