@@ -81,15 +81,17 @@ void loop()
     status = sx126x.send_lora((byte *)payload, payload_len, 2000, NULL);
     Serial.println(rft_status_to_str(status));
 
+    current_freq_offset++;
+
     delay(TX_INTERVAL * 1000);
 }
 
 void build_payload(void)
 {
-    payload[0] = 0xff & (current_freq_offset >> 0);
-    payload[1] = 0xff & (current_freq_offset >> 8);
+    payload[0] = 0xff & current_freq_offset;
+    payload[1] = 0xff & current_freq_offset;
 
-    payload_len = 4;
+    payload_len = 2;
 }
 
 void recalculate_frequency(void)
@@ -121,6 +123,4 @@ void recalculate_frequency(void)
     Serial.print("          Actual frequency:   ");
     Serial.print(actual_frequency);
     Serial.println(" Hz");
-
-    current_freq_offset++;
 }
