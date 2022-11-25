@@ -22,6 +22,28 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 The schematic of the board is available in [<b>doc/LS200-007_SCHEMATIC.pdf</b>](https://github.com/FabienFerrero/DKIOT/blob/main/doc/LS200-007_SCHEMATIC.pdf)
 
+#### OS Specific Setup
+
+##### Linux
+
+ 1. Go to ~/.arduino15/packages/rfthings-stm32l4/hardware/stm32l4/```<VERSION>```/drivers/linux/
+ 2. sudo cp *.rules /etc/udev/rules.d
+ 3. reboot
+
+#####  Windows
+
+###### STM32 BOOTLOADER driver setup for UCA-AIoT boards
+
+ 1. Download [Zadig](http://zadig.akeo.ie)
+ 2. Plugin STM32L4 board and toggle the RESET button while holding down the BOOT button
+ 3. Let Windows finish searching for drivers
+ 4. Start ```Zadig```
+ 5. Select ```Options -> List All Devices```
+ 6. Select ```STM32 BOOTLOADER``` from the device dropdown
+ 7. Select ```WinUSB (v6.1.7600.16385)``` as new driver
+ 8. Click ```Replace Driver```
+
+
 ## Getting Started with Examples
 
 After installing the core, select the RFThings-DKAIoT board by **Tools** > **Board** > **RFThings STM32L4 Boards** > **RFThings-DKAIoT**. Examples will be available in **File** > **Examples** > **ELLIOT_Examples** > **...**
