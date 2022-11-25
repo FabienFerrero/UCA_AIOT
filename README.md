@@ -22,15 +22,15 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 The schematic of the board is available in [<b>doc/LS200-007_SCHEMATIC.pdf</b>](https://github.com/FabienFerrero/DKIOT/blob/main/doc/LS200-007_SCHEMATIC.pdf)
 
-#### OS Specific Setup
+## OS Specific Setup
 
-##### Linux
+### Linux
 
  1. Go to ~/.arduino15/packages/rfthings-stm32l4/hardware/stm32l4/```<VERSION>```/drivers/linux/
  2. sudo cp *.rules /etc/udev/rules.d
  3. reboot
 
-#####  Windows
+###  Windows
 
 ###### STM32 BOOTLOADER driver setup for UCA-AIoT boards
 
