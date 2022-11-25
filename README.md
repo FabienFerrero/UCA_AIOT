@@ -46,7 +46,7 @@ The schematic of the board is available in [<b>doc/LS200-007_SCHEMATIC.pdf</b>](
 
 ## Getting Started with Examples
 
-After installing the core, select the RFThings-DKAIoT board by **Tools** > **Board** > **RFThings STM32L4 Boards** > **RFThings-DKAIoT**. Examples will be available in **File** > **Examples** > **ELLIOT_Examples** > **...**
+After installing the core, select the DKAIoT board by **Tools** > **Board** > **RFThings STM32L4 Boards** > **DKAIoT**. Examples will be available in **File** > **Examples** > **ELLIOT_Examples** > **...**
 
 Select the board           |  Examples
 :-------------------------:|:-------------------------:
