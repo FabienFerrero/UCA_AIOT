@@ -3,9 +3,11 @@
 
 ![UCA_AIoT Board](doc/board.jpg)
 
-## Schematic
+## Board Documentations
 
-The schematic of the board is available in [<b>Schematic/AIoT-001-Jun2621-SCH.pdf</b>](https://github.com/FabienFerrero/UCA_AIOT/blob/main/Schematic/AIoT-001-Jun2621-SCH.pdf)
+The **SCHEMATIC** of the board is available in [<b>Schematic/AIoT-001-Jun2621-SCH.pdf</b>](https://github.com/FabienFerrero/UCA_AIOT/blob/main/Schematic/AIoT-001-Jun2621-SCH.pdf)
+
+The instruction of Connecting to External Sensors/Devices is available in [<b>doc/UCA-AIoT-ExternalConnectivity-rev10-Nov2622.pdf</b>](https://github.com/FabienFerrero/UCA_AIOT/blob/main/doc/UCA-AIoT-ExternalConnectivity-rev10-Nov2622.pdf)
 
 ## Installing Board Manager
 
