@@ -3,6 +3,9 @@
 
 ![UCA_AIoT Board](doc/board.jpg)
 
+## Schematic
+
+The schematic of the board is available in [<b>Schematic/AIoT-001-Jun2621-SCH.pdf</b>](https://github.com/FabienFerrero/UCA_AIOT/blob/main/Schematic/AIoT-001-Jun2621-SCH.pdf)
 
 ## Installing Board Manager
 
@@ -17,10 +20,6 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 6. Select your DKAIoT board from the **Tools** -> **Board menu**
 
 *All examples & libraries used in this reposistory are integrated into the Arduino Core. Make sure that the installed core version is latest to be compatible with all examples in this repository!*
-
-## Schematic
-
-The schematic of the board is available in [<b>doc/LS200-007_SCHEMATIC.pdf</b>](https://github.com/FabienFerrero/DKIOT/blob/main/doc/LS200-007_SCHEMATIC.pdf)
 
 ## OS Specific Setup
 
