@@ -47,7 +47,7 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 ## Getting Started with Examples
 
-After installing the core, select the DKAIoT board by **Tools** > **Board** > **RFThings STM32L4 Boards** > **DKAIoT**. Examples will be available in **File** > **Examples** > **ELLIOT_Examples** > **...**
+After installing the core, select the DKAIoT board by **Tools** > **Board** > **UCA-DKAIoT Boards** > **DKAIoT**. Examples will be available in **File** > **Examples** > **ELLIOT_Examples** > **...**
 
 Select the board           |  Examples
 :-------------------------:|:-------------------------:
