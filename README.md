@@ -27,7 +27,7 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 ### Linux
 
- 1. Go to ~/.arduino15/packages/rfthings-stm32l4/hardware/stm32l4/```<VERSION>```/drivers/linux/
+ 1. Go to ~/.arduino15/packages/uca-aiot/hardware/stm32l4/```<VERSION>```/drivers/linux/
  2. sudo cp *.rules /etc/udev/rules.d
  3. reboot
 
