@@ -1,6 +1,5 @@
 # UCA_AIoT Board (LoRa :green_heart: Space)
 
-
 ![UCA_AIoT Board](doc/board.jpg)
 
 ## Board Documentations
@@ -27,16 +26,26 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 ### Linux
 
+###### STM32 BOOTLOADER driver setup for UCA-AIoT boards
+
  1. Go to ~/.arduino15/packages/uca-aiot/hardware/stm32l4/```<VERSION>```/drivers/linux/
  2. sudo cp *.rules /etc/udev/rules.d
  3. reboot
 
-###  Windows
+**Attention**: If you encounter issues of permission denied on *dfu-prefix*, *dfu-suffix*, *dfu-util*, or *stm32l4-upload* files when compiling/uploading, use this command:
+```
+chmod ugo+x <filename>
+```
+<img src="doc/LinuxPermissionIssue.png" height="350">
+
+Refer to [this issue](https://github.com/FabienFerrero/UCA_AIOT/issues/1) for detailed information.
+
+### Windows
 
 ###### STM32 BOOTLOADER driver setup for UCA-AIoT boards
 
  1. Download [Zadig](http://zadig.akeo.ie)
- 2. Plugin STM32L4 board and toggle the RESET button while holding down the BOOT button
+ 2. Plugin STM32L4 board and toggle the **RESET** button while holding down the **BOOT** button
  3. Let Windows finish searching for drivers
  4. Start ```Zadig```
  5. Select ```Options -> List All Devices```
