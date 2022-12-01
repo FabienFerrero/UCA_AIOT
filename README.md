@@ -40,6 +40,8 @@ chmod ugo+x <filename>
 
 Refer to [this issue](https://github.com/FabienFerrero/UCA_AIOT/issues/1) for detailed information.
 
+*(This bug is fixed from Core version 0.0.7. If you still encounter the same situation with Cores version >= 0.0.7, please create an Issues [here](https://github.com/FabienFerrero/UCA_AIOT/issues/new) to let us know. We would greatly appreciate!)*
+
 ### Windows
 
 ###### STM32 BOOTLOADER driver setup for UCA-AIoT boards
@@ -103,4 +105,6 @@ cfg.busyPin = E22_BUSY;
 cfg.dio1Pin = E22_DIO1;
 ```
 
-##### Maintained by Prof. F. Ferrero & mtnguyen
+---
+
+##### :satellite: :space_invader: :beer: Maintained by Prof. F. Ferrero & mtnguyen :satellite: :space_invader: :beer:
