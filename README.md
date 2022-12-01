@@ -107,4 +107,4 @@ cfg.dio1Pin = E22_DIO1;
 
 ---
 
-##### :satellite: :space_invader: :beer: Maintained by Prof. F. Ferrero & mtnguyen :satellite: :space_invader: :beer:
+##### :satellite: :space_invader: :beer: Maintained by Prof. F. Ferrero & M.T. :satellite: :space_invader: :beer:
