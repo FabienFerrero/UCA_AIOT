@@ -27,7 +27,7 @@ chmod ugo+x <filename>
 
 Refer to [this issue](https://github.com/FabienFerrero/UCA_AIOT/issues/1) for detailed information.
 
-*(This bug is fixed from Core version 0.0.7. If you still encounter the same situation with Cores version >= 0.0.7, please create an Issues [here](https://github.com/FabienFerrero/UCA_AIOT/issues/new) to let us know. We would greatly appreciate!)*
+**Note**: *This bug is fixed from Core version 0.0.7. If you still encounter the same situation with Cores version >= 0.0.7, please create an Issues [here](https://github.com/FabienFerrero/UCA_AIOT/issues/new) to let us know. We would greatly appreciate!*
 
 ---
 
