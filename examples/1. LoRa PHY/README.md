@@ -13,9 +13,21 @@ Default configuration is given below.
 The **lora_phy_receiver_example** listen continuously for LoRa PHY packets and print packet's information to serial monitor.
 Default configuration is given below.
 
-## lora_phy_send_doppler_example
-This code is continuously sending LoRa PHY packets with a sequential shift on the center frequency.
-Default configuration is given below.
+## lora_phy_doppler_simulate_tx_example (Sender)
+## lora_phy_doppler_simulate_rx_example (Receiver)
+These sketches demonstrate the LoRa transmissions between a satellite and a ground station with **doppler** effect.
+
+```
+The Doppler effect or Doppler shift (or simply Doppler) is the change in frequency of a wave in relation to an observer who is moving relative to the wave source.
+```
+
+```
+Every satellite in the constellations, as a high-speed carrier, causes inevitably the Doppler-effect to signals.
+```
+
+The **lora_phy_doppler_simulate_tx_example** is continuously sending LoRa PHY packets with a sequential shift on the center frequency.
+The **lora_phy_doppler_simulate_tx_example** is receive & plot the packet information to the Serial Monitor.
+Both sketches have the Low Datarate Optimization (LDRO) enabled to reduce the doppler effect.
 
 # LoRa PHY parameters
 
