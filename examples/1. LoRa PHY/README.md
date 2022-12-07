@@ -93,9 +93,9 @@ void set_coding_rate(rft_lora_coding_rate_t coding_rate);
 | Parameter   | Value                         | Description     |
 |:-----------:|:-----------------------------:|:---------------:|
 | coding_rate | **RFT_LORA_CODING_RATE_4_5**  | Coding Rate 4/5 |
-| coding_rate | **RFT_LORA_CODING_RATE_4_6**  | Coding Rate 4/5 |
-| coding_rate | **RFT_LORA_CODING_RATE_4_7**  | Coding Rate 4/5 |
-| coding_rate | **RFT_LORA_CODING_RATE_4_8**  | Coding Rate 4/5 |
+| coding_rate | **RFT_LORA_CODING_RATE_4_6**  | Coding Rate 4/6 |
+| coding_rate | **RFT_LORA_CODING_RATE_4_7**  | Coding Rate 4/7 |
+| coding_rate | **RFT_LORA_CODING_RATE_4_8**  | Coding Rate 4/8 |
 
 ### Set LoRa Transmit Syncword
 ```
