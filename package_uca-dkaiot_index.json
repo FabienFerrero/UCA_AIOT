@@ -1,0 +1,178 @@
+{
+  "packages": [
+    {
+      "name": "uca-aiot",
+      "maintainer": "FabienFerrero",
+      "websiteURL": "https://github.com/FabienFerrero/UCA_AIoT_Core/",
+      "email": "Fabien.Ferrero@unice.fr",
+      "help": {
+        "online": "https://univ-cotedazur.fr/"
+      },
+      "platforms": [
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.8",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.8.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.8.tar.gz",
+          "checksum": "MD5:33B4AFA770006949CFED0479661A9A19",
+          "size": "17084871",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.7",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.7.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.7.tar.gz",
+          "checksum": "MD5:C12BAF9FDBFD041B4D4AC16EFDDD04FC",
+          "size": "17086432",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.6",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.6.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.6.tar.gz",
+          "checksum": "MD5:C382ED6C21E6FAB3CAED898EC402A7F3",
+          "size": "17086648",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.5",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.5.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.5.tar.gz",
+          "checksum": "MD5:EE1FAB5B5C9E16781A92877A898C9171",
+          "size": "17072796",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.4",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.4.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.4.tar.gz",
+          "checksum": "MD5:213C35E7E25DF503315487ED7BA93657",
+          "size": "17078602",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.3",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.3.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.3.tar.gz",
+          "checksum": "MD5:BDF4B49C67EC720AA720E7C734F4FD38",
+          "size": "17078838",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        },
+        {
+          "name": "UCA-DKAIoT",
+          "architecture": "stm32l4",
+          "version": "0.0.2",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/FabienFerrero/UCA_AIoT_Core/"
+          },
+          "url": "https://github.com/FabienFerrero/UCA_AIoT_Core/archive/refs/tags/v0.0.2.tar.gz",
+          "archiveFileName": "UCA_AIoT_Core-0.0.2.tar.gz",
+          "checksum": "MD5:B5D91D7DE9CFFB7DE6BAF9A3D13DFFA8",
+          "size": "17076790",
+          "boards": [
+            {"name": "DKAIoT"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            }
+          ]
+        }
+      ],
+      "tools":[
+      ]
+    }
+  ]
+}
