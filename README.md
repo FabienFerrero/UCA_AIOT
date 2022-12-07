@@ -19,8 +19,11 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 ``` 
 5. Open the Boards Manager from the **Tools** -> **Board menu** and install "_UCA-DKAIoT by FabienFerrero_"
 6. Select your DKAIoT board from the **Tools** -> **Board menu**
+7. Config the approriate settings in **Tools** menu, and upload your source code.
 
 *All examples & libraries used in this reposistory are integrated into the Arduino Core. Make sure that the installed core version is latest to be compatible with all examples in this repository!*
+
+**Attention**: *If you have problems in uploading source code to the board (e.g. Uploading failed, COM Port doesn't listed, etc.), refer to *MCU Bootloader Mode* section in [FAQ](./FAQ.md)*.
 
 ## OS Specific Setup
 
@@ -32,15 +35,7 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
  2. sudo cp *.rules /etc/udev/rules.d
  3. reboot
 
-**Attention**: If you encounter issues of permission denied on *dfu-prefix*, *dfu-suffix*, *dfu-util*, or *stm32l4-upload* files when compiling/uploading, use this command:
-```
-chmod ugo+x <filename>
-```
-<img src="doc/LinuxPermissionIssue.png" height="350">
-
-Refer to [this issue](https://github.com/FabienFerrero/UCA_AIOT/issues/1) for detailed information.
-
-*(This bug is fixed from Core version 0.0.7. If you still encounter the same situation with Cores version >= 0.0.7, please create an Issues [here](https://github.com/FabienFerrero/UCA_AIOT/issues/new) to let us know. We would greatly appreciate!)*
+**Attention**: *If you have problems in compiling source code (i.e. Permission denied), refer to *Linux / MacOS file permission for dfu-utils* section in [FAQ](./FAQ.md)*.
 
 ### Windows
 
