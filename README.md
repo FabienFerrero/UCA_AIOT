@@ -15,7 +15,7 @@ The instruction of Connecting to External Sensors/Devices is available in [<b>do
 3. Go to Preferences
 4. Copy & Add the following JSON URL to your "**Additional Board Manager URL**"
 ```
-https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index.json
+https://nguyenmanhthao996tn.github.io/my_files/package_uca-dkaiot_index.json
 ``` 
 5. Open the Boards Manager from the **Tools** -> **Board menu** and install "_UCA-DKAIoT by FabienFerrero_"
 6. Select your DKAIoT board from the **Tools** -> **Board menu**
