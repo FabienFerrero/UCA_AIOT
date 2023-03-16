@@ -1,0 +1,117 @@
+# UCA_AIoT_demo_w_LacunaSpace Example
+
+## Overview
+---
+
+This example demonstrates how an UCA-AIOT board can send data to the LS2B satellite from [**Lacuna Space**](https://lacuna.space/). The device will send data to Lacuna Space LS2B satellite when it passes. The data could be retrieved later from The Things Network Console. It's also send a periodic status packets to terrestrial LoRaWAN Gateway.
+
+## Getting Started
+---
+
+- ### **<u>Step 1: The Things Network devices registration</u>**
+
+This demonstration uses [**The Things Network v3**](https://console.cloud.thethings.network/) (TTN) to receive data from UCA-DKAIOT board. It's recommended to use 2 different **ABP devices** on TTN to monitor data from Satellite and from terrestrial LoRaWAN Gateway. Refer to section **Manually registering a device** in this [instruction](https://www.thethingsindustries.com/docs/devices/adding-devices/) from TTN to create your own application and devices.
+
+![ttn-application.png](docs/ttn-application.png)
+
+For device that will receive data from satellite, add following **Factory Preset Frequencies** for downlink from Satellite in **General Settings** > **Network layer** > **Advanced MAC Settings**:
+
+![ttn-sat-frequency.png](docs/ttn-sat-frequency.png)
+
+
+- ### **<u>Step 2: Declare device to Lacuna Space Dashboard</u>**
+
+In order to forward  packets from Lacuna Satellite to The Things Network, **Device Address** and **NwkSKey** of the Satellite device must be declared to [Lacuna Dashboard](https://dashboard.lacuna.space/). Go to [Lacuna Dashboard](https://dashboard.lacuna.space/), click **Add new device** and fill in your device information (retrieved in **Step 1**).
+
+If you don't have an Lacuna Dashboard account or need support, please check out [Lacuna Forum](https://forum.lacuna.space/).
+
+![](docs/lacuna-dashboard.png)
+
+- ### **<u>Step 3: Modify and upload source code to your UCA-DKAIOT board</u>**
+
+
+
+- **<u>Step 3.1: Device Address, NwkSKey & AppSKey</u>**
+
+Add the **Device Address**, **NwkSKey** & **AppSKey** information that retrieved from The Things Network in **Step 1** to the source code.
+
+![device-addr-keys.png](docs/device-addr-keys.png)
+
+- **<u>Step 3.2: TLE for Lacuna Space LS2B</u>**
+
+For satellite tracking / predicting pass capability, it requires Two Line Element (TLE) of that satellite. Please update the latest TLE in source code from https://www.n2yo.com/satellite/?s=47948 or **Space-Track.org** for more accurate pass prediction.
+
+![tle-in-sourcecode.pn](docs/tle-in-sourcecode.png)
+
+![n2yo-sat-track.png](docs/n2yo-sat-track.png)
+
+- **<u>Step 3.3 (OPTIONAL): Other parameters</u>**
+
+There are other parameters in ```#define``` format the source code can help optimizing the performance in different use cases. Refer to the following **Project Configuration / Parameter Description** section for more information.
+
+## Project Configuration / Parameter Description
+---
+
+```
+// #define DEBUG_SLEEP
+```
+
+Uncomment ```DEBUG_SLEEP``` define will replace sleep functions of the UCA-DKAIOT board with delay. This allow Serial via USB work properly. 
+
+Make sure to comment/delete this option and select **USB Type** as **No USB (low-power)** for field deployment. When debugging with Serial, do it the opposit way.
+
+![usb_type_none.png](docs/usb_type_none.png)
+
+---
+
+```
+#define SAT_PACKET_PERIOD_S (15)                     // 15 seconds
+```
+
+```SAT_PACKET_PERIOD_S``` is the time (in **seconds**) between packets send to satellite when it's available (pass).
+
+---
+
+```
+#define MIN_PASS_ELAVATION (25)                      // 25 degrees
+```
+
+```MIN_PASS_ELAVATION``` is the minimum pass elavation (in **degree**) that the UCA-DKAIOT board will wake up and transmit packets.
+
+---
+
+```
+#define TERRESTRIAL_STATUS_PACKET_PERIOD_S (15 * 60) // 15 minutes
+```
+
+```TERRESTRIAL_STATUS_PACKET_PERIOD_S``` is the time (in **seconds**) between status packets send to terrestrial LoRaWAN gateway.
+
+---
+
+```
+#define GNSS_UPDATE_PERIOD_S (24 * 60 * 60)          // 24 hours
+```
+
+```GNSS_UPDATE_PERIOD_S``` is the time (in **seconds**) between two GNSS update for time and coordinates. This is relative time. GNSS update time could be change if it too close to a satellite pass.
+
+---
+
+```
+#define GNSS_RESCHEDULE_OFFSET_S (30 * 60)           // 30 minutes
+```
+
+```GNSS_RESCHEDULE_OFFSET_S``` is the minumum time (in **seconds**) between a GNSS Update and a satellite pass. GNSS Update Time will be changed to ```Satellite Pass Stop``` + ```GNSS_RESCHEDULE_OFFSET_S``` if it violates the offset.
+
+## Demonstration code behaivour
+---
+
+![flowchart.png](docs/flowchart.png)
+
+## Credit
+---
+This demonstration uses [Hopperpop/Sgp4-Library](https://github.com/Hopperpop/Sgp4-Library) for predicting the next pass of the satellite. Consider to give him star if you can.
+
+Goodluck with your space investigation!
+
+
+##### :satellite: :satellite: :satellite: :satellite: :satellite:
