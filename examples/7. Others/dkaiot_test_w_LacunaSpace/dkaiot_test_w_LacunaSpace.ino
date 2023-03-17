@@ -42,18 +42,18 @@
 
 // Update the latest TLE from here https://www.n2yo.com/satellite/?s=47948 or Space-Track.com
 char satname[] = "LACUNASAT-2B";
-char tle_line1[] = "1 47948U 21022S   23075.22826226  .00042401  00000-0  20646-2 0  9997"; // Line one from the TLE data
-char tle_line2[] = "2 47948  97.5140 336.8426 0013564 292.4188  67.5609 15.18153033108995"; // Line two from the TLE data
+char tle_line1[] = "1 47948U 21022S   23075.29417362  .00041689  00000-0  20299-2 0  9992"; // Line one from the TLE data
+char tle_line2[] = "2 47948  97.5139 336.9081 0013558 292.1396  67.8398 15.18157629109008"; // Line two from the TLE data
 
 // Terrestrial device
-static uint8_t nwkS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-static uint8_t appS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-static uint8_t dev_addr[] = {0x00, 0x00, 0x00, 0x00};
+static uint8_t nwkS_key[] = {0xF3, 0x18, 0xDD, 0x13, 0x4E, 0x35, 0xCC, 0xD9, 0x16, 0x36, 0xEA, 0x79, 0xFE, 0xC5, 0x88, 0x2C};
+static uint8_t appS_key[] = {0x25, 0x68, 0x91, 0x62, 0x2F, 0x9D, 0xEF, 0xB7, 0x35, 0xA0, 0x3F, 0x5C, 0x9C, 0xEB, 0xA0, 0xDC};
+static uint8_t dev_addr[] = {0x26, 0x0B, 0x83, 0x8B};
 
 // Satellite device
-static uint8_t sat_nwkS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-static uint8_t sat_appS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-static uint8_t sat_dev_addr[] = {0x00, 0x00, 0x00, 0x00};
+static uint8_t sat_nwkS_key[] = {0x1A, 0x99, 0xA5, 0xB4, 0xB1, 0xEC, 0xD5, 0x06, 0x15, 0x7E, 0x38, 0x1D, 0xA2, 0x91, 0x95, 0x8E};
+static uint8_t sat_appS_key[] = {0x6C, 0x07, 0x0B, 0x09, 0x54, 0x2F, 0x6C, 0x6F, 0xBB, 0xAD, 0x0A, 0x8B, 0x3E, 0x8B, 0xF4, 0x77};
+static uint8_t sat_dev_addr[] = {0x26, 0x0B, 0xF2, 0x53};
 
 /*******************************************************/
 
@@ -495,8 +495,6 @@ void send_satellite_packet(void)
     uint32_t epoch_now = RTC.getEpoch();
     while ((epoch_now >= next_satellite_pass_start) && (epoch_now < next_satellite_pass_stop))
     {
-        epoch_now = RTC.getEpoch();
-
         generate_packet(true);
         LOG_D("Sending LR-FHSS message: ");
         status = sx126x.send_lorawan_over_lrfhss((byte *)payload, payload_len);
@@ -505,6 +503,7 @@ void send_satellite_packet(void)
         delay(1000);
 
         set_board_sleep(RTC.getEpoch() + SAT_PACKET_PERIOD_S);
+        epoch_now = RTC.getEpoch();
     }
 }
 
@@ -538,27 +537,39 @@ void set_board_sleep(uint32_t wakeup_epoch)
     uint32_t delay_duration = wakeup_epoch - RTC.getEpoch();
     delay(delay_duration * 1000);
 #else
-    time_t t;
-    struct tm tm;
+    uint32_t now_epoch = RTC.getEpoch();
+    if (now_epoch >= wakeup_epoch)
+    {
+        return;
+    }
+    else if (wakeup_epoch - now_epoch <= 5)
+    {
+        delay((wakeup_epoch - now_epoch) * 1000);
+    }
+    else
+    {
+        time_t t;
+        struct tm tm;
 
-    t = (time_t)wakeup_epoch;
-    gmtime_r(&t, &tm);
+        t = (time_t)wakeup_epoch;
+        gmtime_r(&t, &tm);
 
-    RTC.setAlarmTime(tm.tm_hour, tm.tm_min, tm.tm_sec);
-    RTC.setAlarmDay(tm.tm_mday);
+        RTC.setAlarmTime(tm.tm_hour, tm.tm_min, tm.tm_sec);
+        RTC.setAlarmDay(tm.tm_mday);
 
-    RTC.enableAlarm(RTC.MATCH_HHMMSS);
-    RTC.attachInterrupt(rtcAlarmMatch);
+        RTC.enableAlarm(RTC.MATCH_HHMMSS);
+        RTC.attachInterrupt(rtcAlarmMatch);
 
-    digitalWrite(LS_GPS_ENABLE, LOW);
-    digitalWrite(LS_VERSION_ENABLE, LOW);
-    digitalWrite(LS_GPS_V_BCKP, HIGH);
-    digitalWrite(SD_ON_OFF, LOW);
+        digitalWrite(LS_GPS_ENABLE, LOW);
+        digitalWrite(LS_VERSION_ENABLE, LOW);
+        digitalWrite(LS_GPS_V_BCKP, HIGH);
+        digitalWrite(SD_ON_OFF, LOW);
 
-    SPI.end();
-    delay(10);
-    STM32.stop();
+        SPI.end();
+        delay(10);
+        STM32.stop();
 
-    SPI.begin();
+        SPI.begin();
+    }
 #endif
 }
