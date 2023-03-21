@@ -36,7 +36,7 @@
 #define SAT_PACKET_PERIOD_S (15)                     // 15 seconds
 #define MIN_PASS_ELAVATION (25)                      // 25 degrees
 #define TERRESTRIAL_STATUS_PACKET_PERIOD_S (15 * 60) // 15 minutes
-#define GNSS_UPDATE_PERIOD_S (12 * 60 * 60)          // 24 hours
+#define GNSS_UPDATE_PERIOD_S (12 * 60 * 60)          // 12 hours
 #define GNSS_RESCHEDULE_OFFSET_S (30 * 60)           // 30 minutes
 // #define GNSS_FAKE_COORDINATES
 
