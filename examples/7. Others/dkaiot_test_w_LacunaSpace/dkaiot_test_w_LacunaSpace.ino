@@ -36,14 +36,14 @@
 #define SAT_PACKET_PERIOD_S (15)                     // 15 seconds
 #define MIN_PASS_ELAVATION (25)                      // 25 degrees
 #define TERRESTRIAL_STATUS_PACKET_PERIOD_S (15 * 60) // 15 minutes
-#define GNSS_UPDATE_PERIOD_S (24 * 60 * 60)          // 24 hours
+#define GNSS_UPDATE_PERIOD_S (12 * 60 * 60)          // 24 hours
 #define GNSS_RESCHEDULE_OFFSET_S (30 * 60)           // 30 minutes
 // #define GNSS_FAKE_COORDINATES
 
 // Update the latest TLE from here https://www.n2yo.com/satellite/?s=47948 or Space-Track.com
 char satname[] = "LACUNASAT-2B";
-char tle_line1[] = "1 47948U 21022S   23075.29417362  .00041689  00000-0  20299-2 0  9992"; // Line one from the TLE data
-char tle_line2[] = "2 47948  97.5139 336.9081 0013558 292.1396  67.8398 15.18157629109008"; // Line two from the TLE data
+char tle_line1[] = "1 47948U 21022S   23078.72134134  .00029125  00000-0  14138-2 0  9992"; // Line one from the TLE data
+char tle_line2[] = "2 47948  97.5148 340.3121 0013157 277.6191  82.3548 15.18352443109525"; // Line two from the TLE data
 
 // Terrestrial device
 static uint8_t nwkS_key[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
@@ -288,7 +288,11 @@ void gnss_get_time_and_coordinates(void)
     digitalWrite(LS_GPS_V_BCKP, HIGH);
     digitalWrite(SD_ON_OFF, HIGH);
 
+    delay(1000);
+
+    myGPS.hardReset();
     uint32_t fix_time_start = RTC.getEpoch();
+    delay(200);
 
     // Wait for GPS to fix
     while (myGPS.getFixType() != 3) // 3D fix only
