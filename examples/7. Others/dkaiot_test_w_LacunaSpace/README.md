@@ -19,9 +19,9 @@ For device that will receive data from satellite, add following **Factory Preset
 ![ttn-sat-frequency.png](docs/ttn-sat-frequency.png)
 
 
-- ### **<u>Step 2: Declare device to Lacuna Space Dashboard</u>**
+- ### **<u>Step 2: Declare device to Lacuna Space Dashboard (OPTIONAL)</u>**
 
-In order to forward  packets from Lacuna Satellite to The Things Network, **Device Address** and **NwkSKey** of the Satellite device must be declared to [Lacuna Dashboard](https://dashboard.lacuna.space/). Go to [Lacuna Dashboard](https://dashboard.lacuna.space/), click **Add new device** and fill in your device information (retrieved in **Step 1**).
+In order to check/list your packets from Lacuna Satellite in cased that The Things Network failed/drop it, **Device Address** and **NwkSKey** of the Satellite device must be declared to [Lacuna Dashboard](https://dashboard.lacuna.space/). Go to [Lacuna Dashboard](https://dashboard.lacuna.space/), click **Add new device** and fill in your device information (retrieved in **Step 1**).
 
 If you don't have an Lacuna Dashboard account or need support, please check out [Lacuna Forum](https://forum.lacuna.space/).
 
