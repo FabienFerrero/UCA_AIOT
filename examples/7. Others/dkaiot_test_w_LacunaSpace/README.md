@@ -5,6 +5,8 @@
 
 This example demonstrates how an UCA-AIOT board can send data to the LS2B satellite from [**Lacuna Space**](https://lacuna.space/). The device will send data to Lacuna Space LS2B satellite when it passes. The data could be retrieved later from The Things Network Console. It's also send a periodic status packets to terrestrial LoRaWAN Gateway.
 
+<u>**FYI**</u>: This source code is aim to test the connectivity between DKAIoT board with Lacuna Space satellites only. It uses a TLE which is not updated while the board runs. Therefore, the prediction of satellite passes will have bigger & bigger error over the time. For practical deploying purpose/scenario, please contact [**Lacuna Space**](https://lacuna.space/) for official firmware or implement the auto TLE update.
+
 ## Getting Started
 ---
 
@@ -14,30 +16,21 @@ This demonstration uses [**The Things Network v3**](https://console.cloud.thethi
 
 ![ttn-application.png](docs/ttn-application.png)
 
-For device that will receive data from satellite, add following **Factory Preset Frequencies** for downlink from Satellite in **General Settings** > **Network layer** > **Advanced MAC Settings**:
+<u>**Important**</u>: For device that will receive data from satellite, if you are **NOT** using **EU868 Frequency Plan**, add following **Factory Preset Frequencies** for downlink from Satellite in **General Settings** > **Network layer** > **Advanced MAC Settings**:
 
 ![ttn-sat-frequency.png](docs/ttn-sat-frequency.png)
 
-
-- ### **<u>Step 2: Declare device to Lacuna Space Dashboard (OPTIONAL)</u>**
-
-In order to check/list your packets from Lacuna Satellite in cased that The Things Network failed/drop it, **Device Address** and **NwkSKey** of the Satellite device must be declared to [Lacuna Dashboard](https://dashboard.lacuna.space/). Go to [Lacuna Dashboard](https://dashboard.lacuna.space/), click **Add new device** and fill in your device information (retrieved in **Step 1**).
-
-If you don't have an Lacuna Dashboard account or need support, please check out [Lacuna Forum](https://forum.lacuna.space/).
-
-![](docs/lacuna-dashboard.png)
-
-- ### **<u>Step 3: Modify and upload source code to your UCA-DKAIOT board</u>**
+- ### **<u>Step 2: Modify and upload source code to your UCA-DKAIOT board</u>**
 
 
 
-- **<u>Step 3.1: Device Address, NwkSKey & AppSKey</u>**
+- **<u>Step 2.1: Device Address, NwkSKey & AppSKey</u>**
 
-Add the **Device Address**, **NwkSKey** & **AppSKey** information that retrieved from The Things Network in **Step 1** to the source code.
+In the Arduino source code, add the **Device Address**, **NwkSKey** & **AppSKey** information that retrieved from The Things Network in **Step 1** to the source code.
 
 ![device-addr-keys.png](docs/device-addr-keys.png)
 
-- **<u>Step 3.2: TLE for Lacuna Space LS2B</u>**
+- **<u>Step 2.2: TLE for Lacuna Space LS2B</u>**
 
 For satellite tracking / predicting pass capability, it requires Two Line Element (TLE) of that satellite. Please update the latest TLE in source code from https://www.n2yo.com/satellite/?s=47948 or **Space-Track.org** for more accurate pass prediction.
 
@@ -45,9 +38,17 @@ For satellite tracking / predicting pass capability, it requires Two Line Elemen
 
 ![n2yo-sat-track.png](docs/n2yo-sat-track.png)
 
-- **<u>Step 3.3 (OPTIONAL): Other parameters</u>**
+- **<u>Step 2.3 (OPTIONAL): Other parameters</u>**
 
 There are other parameters in ```#define``` format the source code can help optimizing the performance in different use cases. Refer to the following **Project Configuration / Parameter Description** section for more information.
+
+- ### **<u>Step 3: Declare device to Lacuna Space Dashboard (OPTIONAL)</u>**
+
+In order to check/list your packets from Lacuna Satellite in cased that The Things Network failed/drop it, **Device Address** and **NwkSKey** of the Satellite device must be declared to [Lacuna Dashboard](https://dashboard.lacuna.space/). Go to [Lacuna Dashboard](https://dashboard.lacuna.space/), click **Add new device** and fill in your device information (retrieved in **Step 1**).
+
+If you don't have an Lacuna Dashboard account or need support, please check out [Lacuna Forum](https://forum.lacuna.space/).
+
+![](docs/lacuna-dashboard.png)
 
 ## Project Configuration / Parameter Description
 ---
