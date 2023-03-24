@@ -77,6 +77,8 @@ For more information on the examples:
 
 [7. Others](examples/7.%20Others/)
 
+* [Send to LacunaSpace Example](examples/7.%20Others/dkaiot_test_w_LacunaSpace)
+
 ## Other Supported Library
 
 The board has been successfully tested with several SX1262 library :
