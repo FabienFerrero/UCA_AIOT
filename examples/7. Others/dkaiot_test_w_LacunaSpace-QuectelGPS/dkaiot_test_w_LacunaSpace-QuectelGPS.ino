@@ -327,7 +327,7 @@ void gnss_get_time_and_coordinates(void)
                 tmpBuff += revChar;
                 if (tmpBuff.equals(str3D))
                 {
-                    // Serial.println("Detected 3D Fix");
+                    // LOG_D_NL("Detected 3D Fix");
 
                     if ((fixType == 0) && nmea.isValid())
                     {
@@ -339,7 +339,7 @@ void gnss_get_time_and_coordinates(void)
                 if (revChar == '\n')
                 {
                     flagRead = false;
-                    Serial.println(tmpBuff);
+                    LOG_D_NL(tmpBuff);
                 }
             }
         }
