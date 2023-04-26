@@ -77,7 +77,9 @@ For more information on the examples:
 
 [7. Others](examples/7.%20Others/)
 
-* [Send to LacunaSpace Example](examples/7.%20Others/dkaiot_test_w_LacunaSpace)
+* dkaiot_test_w_LacunaSpace
+   * [For Ublox CAM-M8Q GNSS](examples/7.%20Others/dkaiot_test_w_LacunaSpace)
+   * [For Quectel L96 GNSS](examples/7.%20Others/dkaiot_test_w_LacunaSpace-QuectelGPS)
 
 ## Other Supported Library
 
