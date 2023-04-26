@@ -3,6 +3,8 @@
 ## Overview
 ---
 
+<img src="./docs/gnss-module.jpg" height="300">
+
 This example demonstrates how an UCA-AIOT board can send data to the LS2B satellite from [**Lacuna Space**](https://lacuna.space/). The device will send data to Lacuna Space LS2B satellite when it passes. The data could be retrieved later from The Things Network Console. It's also send a periodic status packets to terrestrial LoRaWAN Gateway.
 
 <u>**FYI**</u>: This source code is aim to test the connectivity between DKAIoT board with Lacuna Space satellites only. It uses a TLE which is not updated while the board runs. Therefore, the prediction of satellite passes will have bigger & bigger error over the time. For practical deploying purpose/scenario, please contact [**Lacuna Space**](https://lacuna.space/) for official firmware or implement the auto TLE update.
