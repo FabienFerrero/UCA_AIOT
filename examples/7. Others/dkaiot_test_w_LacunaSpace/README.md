@@ -18,7 +18,16 @@ This demonstration uses [**The Things Network v3**](https://console.cloud.thethi
 
 <u>**Important**</u>: For device that will receive data from satellite, if you are **NOT** using **EU868 Frequency Plan**, add following **Factory Preset Frequencies** for downlink from Satellite in **General Settings** > **Network layer** > **Advanced MAC Settings**:
 
-![ttn-sat-frequency.png](docs/ttn-sat-frequency.png)
+| **Factory Preset Frequencies** |
+|:------------------------------:|
+|            868100000           |
+|            868300000           |
+|            868500000           |
+|            867100000           |
+|            867300000           |
+|            867500000           |
+|            867700000           |
+|            867900000           |
 
 - ### **<u>Step 2: Modify and upload source code to your UCA-DKAIOT board</u>**
 
