@@ -315,7 +315,7 @@ void lora_init(void)
             LOG_D("Device address: ");
             for (int i = 0; i < 4; i++)
             {
-                LOG_D(otaa_dev_addr[i], HEX);
+                LOG_D(terrestrial_dev_addr[i], HEX);
                 LOG_D(" ");
             }
             LOG_D_NL();
@@ -323,7 +323,7 @@ void lora_init(void)
             LOG_D("Network session key: ");
             for (int i = 0; i < 16; i++)
             {
-                LOG_D(otaa_nwkS_key[i], HEX);
+                LOG_D(terrestrial_nwkS_key[i], HEX);
                 LOG_D(" ");
             }
             LOG_D_NL();
@@ -331,7 +331,7 @@ void lora_init(void)
             LOG_D("Application session address: ");
             for (int i = 0; i < 16; i++)
             {
-                LOG_D(otaa_appS_key[i], HEX);
+                LOG_D(terrestrial_appS_key[i], HEX);
                 LOG_D(" ");
             }
             LOG_D_NL();
