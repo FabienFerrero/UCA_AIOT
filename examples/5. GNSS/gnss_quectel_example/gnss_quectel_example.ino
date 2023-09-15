@@ -220,20 +220,25 @@ unsigned long unixTimestamp(int year, int month, int day, int hour, int min, int
 
 void quectel_getData(void)
 {
-    char revChar = 0;
+  char revChar = 0;
+  char prevChar = 0;
 
-    Wire.requestFrom(I2C_GPS_QUECTEL_ADDRESS, 255);
-    while (Wire.available())
+  Wire.requestFrom(I2C_GPS_QUECTEL_ADDRESS, 255);
+  while (Wire.available())
+  {
+    revChar = Wire.read();
+    nmea.process(revChar);
+    // Serial.print(revChar);
+
+    if ((prevChar == 0x0A) && (revChar == 0x0A)) // End character | Garbage bytes
     {
-        revChar = Wire.read();
-        nmea.process(revChar);
-        Serial.print(revChar);
-
-        if (revChar == 0x0A) // End character | Garbage bytes
-        {
-            quectelDelayTime = 500; // 500ms
-            return;
-        }
+      quectelDelayTime = 500; // 500ms
+      return;
     }
-    quectelDelayTime = 5; // 5ms (Minimum delay time for slave to prepare the next NMEA packet is 2ms)
+    else
+    {
+      prevChar = revChar;
+    }
+  }
+  quectelDelayTime = 5; // 5ms (Minimum delay time for slave to prepare the next NMEA packet is 2ms)
 }
