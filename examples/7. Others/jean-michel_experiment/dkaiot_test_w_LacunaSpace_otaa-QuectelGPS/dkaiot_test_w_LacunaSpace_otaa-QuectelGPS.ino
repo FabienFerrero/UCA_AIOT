@@ -27,6 +27,7 @@
 #include <Wire.h>
 #include <Sgp4.h>      // https://github.com/Hopperpop/Sgp4-Library
 #include <MicroNMEA.h> // http://librarymanager/All#MicroNMEA
+#include <ICM_20948.h> // https://github.com/sparkfun/SparkFun_ICM-20948_ArduinoLibrary
 
 /**************** PROJECT CONFIGURATION ****************/
 /**
@@ -87,6 +88,7 @@ uint32_t gnss_unix_time = 1678974432;
 int32_t gnss_latitude = 436149513;
 int32_t gnss_longitude = 70713642;
 int32_t gnss_altitude = 20000;
+uint8_t gnss_siv = 0;
 
 // Event timestamp
 uint32_t next_gnss_update = 0;
@@ -99,6 +101,9 @@ uint32_t next_status_packet = 0;
 
 // Satellite predictor
 Sgp4 predictor;
+
+// ICM
+ICM_20948_I2C myICM; // Otherwise create an ICM_20948_I2C object
 
 void setup(void)
 {
@@ -123,6 +128,9 @@ void setup(void)
 
     // LoRa Init
     lora_init();
+
+    // Sensors
+    sensor_init();
 
     gnss_get_time_and_coordinates();
     predict_next_sat_pass();
@@ -348,6 +356,34 @@ void lora_init(void)
     }
 }
 
+void sensor_init(void)
+{
+    digitalWrite(LS_GPS_ENABLE, HIGH);
+    digitalWrite(LS_GPS_V_BCKP, HIGH);
+    digitalWrite(SD_ON_OFF, HIGH);
+
+    Wire.begin();
+
+    delay(1000);
+
+    // ICM
+    myICM.begin(Wire, 0);
+    LOG_D("ICM: ");
+    LOG_D_NL(myICM.statusString());
+    if (myICM.status != ICM_20948_Stat_Ok)
+    {
+        LOG_D_NL("ICM: Try again....");
+    }
+    else
+    {
+        LOG_D_NL("ICM: Successful");
+    }
+
+    digitalWrite(LS_GPS_ENABLE, LOW);
+    digitalWrite(LS_GPS_V_BCKP, HIGH);
+    digitalWrite(SD_ON_OFF, LOW);
+}
+
 void gnss_get_time_and_coordinates(void)
 {
 #if !defined(GNSS_FAKE_COORDINATES)
@@ -425,6 +461,7 @@ void gnss_get_time_and_coordinates(void)
     {
         gnss_altitude = alt_tmp;
     }
+    gnss_siv = nmea.getNumSatellites();
 
     LOG_D_NL("Update new GNSS Time & Coordinates");
     LOG_D("Fix time (seconds): ");
@@ -442,14 +479,14 @@ void gnss_get_time_and_coordinates(void)
     LOG_D(gnss_altitude);
     LOG_D_NL(" millimeters");
 
-    // Update time on STM32 RTC Module
-    RTC.setEpoch(gnss_unix_time);
-
     // Power off GPS module and I2C line
     digitalWrite(LS_GPS_ENABLE, LOW);
     digitalWrite(LS_GPS_V_BCKP, HIGH);
     digitalWrite(SD_ON_OFF, LOW);
 #endif
+
+    // Update time on STM32 RTC Module
+    RTC.setEpoch(gnss_unix_time);
     next_gnss_update = RTC.getEpoch() + GNSS_UPDATE_PERIOD_S;
 }
 
@@ -517,10 +554,23 @@ unsigned long unixTimestamp(int year, int month, int day, int hour, int min, int
 
 void generate_packet(bool send_to_satellite)
 {
+    LOG_D("generate_packet(");
+    LOG_D(send_to_satellite);
+    LOG_D_NL(")");
+
+    digitalWrite(LS_GPS_ENABLE, HIGH);
+    digitalWrite(LS_GPS_V_BCKP, HIGH);
+    digitalWrite(SD_ON_OFF, HIGH);
+
     // Clear payload data
     memset((void *)payload, 0, 255);
     payload_len = 0;
 
+    delay(200);
+
+    myICM.startupDefault(false);
+
+#if 0
     // Packet type: '1' = Send to satellite | '0' = Send to terrestrial gateways
     payload[0] = (send_to_satellite ? 1 : 0);
 
@@ -581,6 +631,114 @@ void generate_packet(bool send_to_satellite)
     payload[24] = (gnss_longitude >> 24) & 0xff;
 
     payload_len = 25;
+
+#else
+
+    // Packet type: '1' = Send to satellite | '0' = Send to terrestrial gateways
+    payload[0] = (send_to_satellite ? 1 : 0);
+
+    // Temperature
+    uint32_t ICM_read_timeout_start = millis();
+    while ((!myICM.dataReady()) && (millis() - ICM_read_timeout_start < 5000))
+    {
+    }
+    if (myICM.dataReady())
+    {
+        myICM.getAGMT();
+
+        payload[1] = (int(myICM.temp() * 100) >> 0) & 0xff; // Temperature in Celsius 2 bytes
+        payload[2] = (int(myICM.temp() * 100) >> 8) & 0xff;
+        LOG_D("Temperature: ");
+        LOG_D_NL(myICM.temp());
+    }
+    else
+    {
+        LOG_D_NL("Accelerometer not available");
+    }
+
+    // GNSS
+    payload[3] = (gnss_latitude >> 0) & 0xff;
+    payload[4] = (gnss_latitude >> 8) & 0xff;
+    payload[5] = (gnss_latitude >> 16) & 0xff;
+    payload[6] = (gnss_latitude >> 24) & 0xff;
+
+    payload[7] = (gnss_longitude >> 0) & 0xff;
+    payload[8] = (gnss_longitude >> 8) & 0xff;
+    payload[9] = (gnss_longitude >> 16) & 0xff;
+    payload[10] = (gnss_longitude >> 24) & 0xff;
+
+    payload[11] = (gnss_altitude >> 0) & 0xff;
+    payload[12] = (gnss_altitude >> 8) & 0xff;
+    payload[13] = (gnss_altitude >> 16) & 0xff;
+    payload[14] = (gnss_altitude >> 24) & 0xff;
+
+    // Accelerometer
+    ICM_read_timeout_start = millis();
+    while ((!myICM.dataReady()) && (millis() - ICM_read_timeout_start < 5000))
+    {
+    }
+    if (myICM.dataReady())
+    {
+        myICM.getAGMT();
+        float accX = myICM.accX();
+        float accY = myICM.accY();
+        float accZ = myICM.accZ();
+
+        LOG_D("Accelerometer: ");
+        LOG_D(accX);
+        LOG_D(" ");
+        LOG_D(accY);
+        LOG_D(" ");
+        LOG_D_NL(accZ);
+
+        payload[15] = (int)((accX / 2000.0) * 127); // -127..127
+        payload[16] = (int)((accY / 2000.0) * 127); // -127..127
+        payload[17] = (int)((accZ / 2000.0) * 127); // -127..127
+    }
+    else
+    {
+        LOG_D_NL("Accelerometer not available");
+    }
+
+    // Battery
+    uint16_t voltage_adc = (uint16_t)analogRead(LS_BATVOLT_PIN);
+    payload[18] = (voltage_adc >> 0) & 0xff;
+    payload[19] = (voltage_adc >> 8) & 0xff;
+    LOG_D("Battery: ");
+    LOG_D_NL(voltage_adc);
+
+    // Num of satellites
+    payload[20] = gnss_siv & 0xff;
+
+    // TLE Age
+    double jdC = predictor.satrec.jdsatepoch;
+    uint32_t now_epoch = RTC.getEpoch();
+    uint32_t tle_age_unix = getUnixFromJulian(jdC);
+    uint32_t tle_age_days = (now_epoch - tle_age_unix) / (24 * 60 * 60);
+    if (tle_age_days > 255)
+    {
+        tle_age_days = 255;
+    }
+    payload[21] = tle_age_days & 0xff;
+    LOG_D("TLE Age: ");
+    LOG_D(jdC);
+    LOG_D(" ");
+    LOG_D(now_epoch);
+    LOG_D(" ");
+    LOG_D(tle_age_unix);
+    LOG_D(" ");
+    LOG_D_NL(tle_age_days);
+
+    // Last GNSS fix time
+    payload[22] = (last_gnss_fix_time < 255) ? (last_gnss_fix_time & 0xff) : 255;
+
+    payload_len = 23;
+
+#endif
+
+    digitalWrite(LS_GPS_ENABLE, LOW);
+    digitalWrite(LS_GPS_V_BCKP, HIGH);
+    digitalWrite(SD_ON_OFF, LOW);
 }
 
 void send_terrestrial_status_packet(void)
