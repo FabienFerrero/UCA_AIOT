@@ -25,10 +25,13 @@ function decodeUplink(input) {
     gnss_altitude /= 1.0e3;
     
     var accX = input.bytes[15];
+    accX = sign_extend_8bit(accX);
     accX = accX * 2000.0 / 127.0;
     var accY = input.bytes[16];
+    accY = sign_extend_8bit(accY);
     accY = accY * 2000.0 / 127.0;
     var accZ = input.bytes[17];
+    accZ = sign_extend_8bit(accZ);
     accZ = accZ * 2000.0 / 127.0;
     
     var battery_voltage = input.bytes[18];
@@ -67,4 +70,8 @@ function decodeUplink(input) {
       errors: []
     };
   }
+}
+
+function sign_extend_8bit(value) {
+  return ((value << 24) >> 24);
 }
