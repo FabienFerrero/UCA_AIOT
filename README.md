@@ -25,6 +25,8 @@ https://fabienferrero.github.io/ArduinoBoardManagerJSON/package_uca-dkaiot_index
 
 **Attention**: *If you have problems in uploading source code to the board (e.g. Uploading failed, COM Port doesn't listed, etc.), refer to *MCU Bootloader Mode* section in [FAQ](./FAQ.md)*.
 
+**Attention**: *Arduino is using a different pin name in this core. If you look for the pin number, you can use the pin map in [PIN_MAP.md](./PIN_MAP.md)*
+
 ## OS Specific Setup
 
 ### Linux
