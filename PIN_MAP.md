@@ -1,0 +1,49 @@
+# Pin Map for Arduino
+
+| **Arduino Pin Number** | **Pin Name** |                  **Arduino Pin Attributes**                 | **Alternative Function 1** | **Alternative Function 2** | **Alternative Function 3** |
+|:----------------------:|:------------:|:-----------------------------------------------------------:|:--------------------------:|:--------------------------:|:--------------------------:|
+|            0           |      PC5     |               (PIN_ATTR_EXTI\|PIN_ATTR_WKUP5)               |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|            1           |      PC4     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|            2           |     PB12     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|            3           |     PB13     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM1     |        PWM_CHANNEL_1       |       ADC_INPUT_NONE       |
+|            4           |     PB14     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM1     |        PWM_CHANNEL_2       |       ADC_INPUT_NONE       |
+|            5           |     PB15     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM1     |        PWM_CHANNEL_3       |       ADC_INPUT_NONE       |
+|            6           |      PC9     |                        (PIN_ATTR_PWM)                       |      PWM_INSTANCE_TIM3     |        PWM_CHANNEL_4       |       ADC_INPUT_NONE       |
+|            7           |      PC8     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM3     |        PWM_CHANNEL_3       |       ADC_INPUT_NONE       |
+|            8           |      PA3     |         (PIN_ATTR_ADC\|PIN_ATTR_PWM\|PIN_ATTR_EXTI)         |      PWM_INSTANCE_TIM5     |        PWM_CHANNEL_4       |         ADC_INPUT_8        |
+|            9           |      PA2     | (PIN_ATTR_ADC\|PIN_ATTR_PWM\|PIN_ATTR_EXTI\|PIN_ATTR_WKUP4) |      PWM_INSTANCE_TIM5     |        PWM_CHANNEL_3       |         ADC_INPUT_7        |
+|           10           |      PD2     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           11           |     PC12     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           12           |     PC11     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           13           |     PC10     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           14           |      PA4     |         (PIN_ATTR_ADC\|PIN_ATTR_DAC\|PIN_ATTR_EXTI)         |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |         ADC_INPUT_9        |
+|           15           |      PA5     |         (PIN_ATTR_ADC\|PIN_ATTR_DAC\|PIN_ATTR_EXTI)         |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |        ADC_INPUT_10        |
+|           16           |      PC3     |                (PIN_ATTR_ADC\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |         ADC_INPUT_4        |
+|           17           |      PC2     |                (PIN_ATTR_ADC\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |         ADC_INPUT_3        |
+|           18           |      PC1     |                (PIN_ATTR_ADC\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |         ADC_INPUT_2        |
+|           19           |      PC0     |                (PIN_ATTR_ADC\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |         ADC_INPUT_1        |
+|           20           |      PB9     |                        (PIN_ATTR_PWM)                       |      PWM_INSTANCE_TIM4     |        PWM_CHANNEL_4       |       ADC_INPUT_NONE       |
+|           21           |      PB8     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM4     |        PWM_CHANNEL_3       |       ADC_INPUT_NONE       |
+|           22           |      PB4     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           23           |      PB5     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           24           |      PB3     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           25           |      PB2     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           26           |     PA10     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           27           |      PA9     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           28           |     PA11     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           29           |     PA12     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           30           |      PA0     | (PIN_ATTR_ADC\|PIN_ATTR_PWM\|PIN_ATTR_EXTI\|PIN_ATTR_WKUP1) |      PWM_INSTANCE_TIM5     |        PWM_CHANNEL_1       |         ADC_INPUT_5        |
+|           31           |      PA1     |         (PIN_ATTR_ADC\|PIN_ATTR_PWM\|PIN_ATTR_EXTI)         |      PWM_INSTANCE_TIM5     |        PWM_CHANNEL_2       |         ADC_INPUT_6        |
+|           32           |     PB11     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           33           |     PB10     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           34           |      PB1     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           35           |      PB0     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           36           |      PA7     |                         PIN_ATTR_ADC                        |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |        ADC_INPUT_12        |
+|           37           |      PA6     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           38           |      PA8     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           39           |      PC7     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM3     |        PWM_CHANNEL_2       |       ADC_INPUT_NONE       |
+|           40           |      PC6     |                (PIN_ATTR_PWM\|PIN_ATTR_EXTI)                |      PWM_INSTANCE_TIM3     |        PWM_CHANNEL_1       |       ADC_INPUT_NONE       |
+|           41           |     PA15     |                       (PIN_ATTR_EXTI)                       |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           42           |      PB7     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           43           |      PB6     |                              0                              |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
+|           44           |     PC13     |               (PIN_ATTR_EXTI\|PIN_ATTR_WKUP2)               |      PWM_INSTANCE_NONE     |      PWM_CHANNEL_NONE      |       ADC_INPUT_NONE       |
